@@ -26,3 +26,7 @@ def main():
 
         elif command == "list":
             list_goals()
+
+        elif command == "complete" and cmd[1].isdigit():
+                complete_goal(int(cmd[1]))
+    
