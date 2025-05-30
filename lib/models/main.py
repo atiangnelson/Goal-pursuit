@@ -29,4 +29,7 @@ def main():
 
         elif command == "complete" and cmd[1].isdigit():
                 complete_goal(int(cmd[1]))
+
+        elif command == "delete" and cmd[1].isdigit():
+                delete_goal(int(cmd[1]))        
     
