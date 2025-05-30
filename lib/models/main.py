@@ -20,23 +20,26 @@ def main():
             if not cmd:
                 continue
 
-        command = cmd[0]
-        if command == "add":
-            add_goal(" ".join(cmd[1:]))
+            command = cmd[0]
+            if command == "add":
+                add_goal(" ".join(cmd[1:]))
 
-        elif command == "list":
-            list_goals()
+            elif command == "list":
+                list_goals()
 
-        elif command == "complete" and len(cmd) > 1 and cmd[1].isdigit():
-            complete_goal(int(cmd[1]))
+            elif command == "complete" and len(cmd) > 1 and cmd[1].isdigit():
+                complete_goal(int(cmd[1]))
 
-        elif command == "delete" and len(cmd) > 1 and cmd[1].isdigit():
-            delete_goal(int(cmd[1]))      
+            elif command == "delete" and len(cmd) > 1 and cmd[1].isdigit():
+                delete_goal(int(cmd[1]))      
 
-        elif command == "exit":
+            elif command == "exit":
+                break
+
+            else:
+                print("Unknown command.")
+                print_help()          
+
+        except KeyboardInterrupt:
+            print("\nExiting...")
             break
-
-        else:
-            print("Unknown command.")
-            print_help()          
-    
