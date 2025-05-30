@@ -43,3 +43,6 @@ def main():
         except KeyboardInterrupt:
             print("\nExiting...")
             break
+
+        if __name__ == '__main__':
+            main()
