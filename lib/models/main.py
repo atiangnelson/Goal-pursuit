@@ -9,3 +9,7 @@ Commands:
   delete [id]        - Delete a goal
   exit               - Exit app
 """)
+    
+def main():
+    print("Welcome to Goal Tracker CLI")
+    print_help()    
