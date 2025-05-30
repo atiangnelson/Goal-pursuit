@@ -20,6 +20,9 @@ def main():
             if not cmd:
                 continue
 
-            command = cmd[0]
-        except Exception as e:
-            print(f"An error occurred: {e}")
+        command = cmd[0]
+        if command == "add":
+            add_goal(" ".join(cmd[1:]))
+
+        elif command == "list":
+            list_goals()
