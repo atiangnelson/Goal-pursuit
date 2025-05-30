@@ -13,3 +13,13 @@ Commands:
 def main():
     print("Welcome to Goal Tracker CLI")
     print_help()    
+
+    while True:
+        try:
+            cmd = input("\n> ").strip().split()
+            if not cmd:
+                continue
+
+            command = cmd[0]
+        except Exception as e:
+            print(f"An error occurred: {e}")
